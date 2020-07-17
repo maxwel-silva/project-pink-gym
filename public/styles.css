@@ -2,7 +2,7 @@
 
 :root {
   --color-golden: #F1AF09;
-  --color-black: #000000ad;
+  --color-black: #00000057;
 }
 
 * {
@@ -45,11 +45,10 @@ header {
   color: var(--color-golden);
 }
 
-/*/
+
 .links a.active{
   color: var(--color-golden);
 }
-*/
 
 .links a::after {
   content: "";
@@ -64,4 +63,20 @@ header {
 .links a:hover::after {
   width: 100%;
   transition: width 200ms ease-in-out;
+}
+
+.card {
+  background-color: white;
+  width: 800px;
+  height: 400px;
+
+  /* Espaçamento no Centro */
+  margin: 45px auto;
+
+  /* Grid Dividido no Meio */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* Sombra */
+  box-shadow: 20px 20px 40px -2px var(--color-black);
 }
