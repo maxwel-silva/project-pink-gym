@@ -79,4 +79,20 @@ header {
 
   /* Sombra */
   box-shadow: 20px 20px 40px -2px var(--color-black);
+
+  /* Animação */
+  animation-name: up;
+  animation-duration: 200ms;
+  animation-timing-function: ease;
+}
+
+@keyframes up {
+  from { 
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
