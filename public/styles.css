@@ -145,15 +145,17 @@ header {
 }
 
 .details .item span {
-  display: inline-block;
+  display: inline-flex;
   margin-top: 8px;
   margin-right: 4px;
   padding: 8px 16px;
   font-size: 12px;
   color: var(--color-black);
-  background-image: linear-gradient(to right, rgba(253, 227, 167, 1) , rgba(250, 191, 88, 0.534));
+  background-image: linear-gradient(to right, rgba(253, 227, 167, 1) , rgba(240, 192, 111, 0.534));
   border-radius: 18px;
-  font-weight: bold; 
+  font-weight: bold;
+  align-items: center;
+
 }
 
 /* ---------- FORM ---------- */
@@ -164,15 +166,17 @@ input {
   color: white;
   font-size: 14px;
   background: transparent;
+  flex: left;
+  cursor: pointer;
 }
 
 input[type="radio"] {
   width: initial;
-  margin-right: 4px;
+  margin-right: 8px; 
 }
 
 input::placeholder {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
 }
 
