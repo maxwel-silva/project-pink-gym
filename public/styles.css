@@ -41,13 +41,18 @@ header {
   position: relative;
 }
 
-.links a:hover{
+.links a:hover {
   color: var(--color-golden);
 }
 
+.links a.active {
+  font-weight: bold;
 
-.links a.active{
+  /*
+
   color: var(--color-golden);
+
+  */
 }
 
 .links a::after {
@@ -62,13 +67,15 @@ header {
 
 .links a:hover::after {
   width: 100%;
-  transition: width 200ms ease-in-out;
+  transition: width 100ms ease-in-out;
 }
+
+/* ---------- CARD ---------- */
 
 .card {
   background-color: var(--color-black);
-  width: 900px;
-  min-height: 500px;
+  width: 800px;
+  min-height: 400px;
 
   /* Espaçamento no Centro */
   margin: 45px auto;
@@ -80,9 +87,9 @@ header {
   /* Sombra */
   box-shadow: 20px 20px 40px -2px var(--color-black);
 
-  /* Animação */
+  /* Animação do Card */
   animation-name: up;
-  animation-duration: 100ms;
+  animation-duration: 200ms;
   animation-timing-function: ease;
 }
 
@@ -97,7 +104,7 @@ header {
   }
 }
 
-/* Details */
+/* ---------- Details ---------- */
 
 .details {
   color: white;
@@ -106,46 +113,75 @@ header {
 
 .details .item {
   border-bottom: 1px solid rgba(245, 171, 53, 0.315);
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 .details .item:last-child {
   border: none;
 }
 
-
 /* Pegando Primeira <div> </div> de Details e <h3> </h3> */
 .details h3,
 .details .item div:nth-child(1){
   font-size: 14px;
-  letter-spacing: 0.7px;
+  line-height: 24px;
+  letter-spacing: 1px;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.397);
 }
 
 /* Pegando Segunda <div> </div> de Details */
 .details .item div:nth-child(2){
-  line-height: 20px;
   color: white;
-  font-size: 14
-  
-  px;
+  font-size: 18;
+  margin-top: 10px;
 }
 
 .details h3 {
+  /*text-transform: uppercase;*/
   font-weight: bold;
+  font-size: 18px;
   color: var(--color-golden);
 }
 
 .details .item span {
-  padding: 8px 16px;
-  background-image: linear-gradient(to right, rgba(253, 227, 167, 1) , rgba(250, 191, 88, 0.678));
-  border-radius: 16px;
-  color: rgb(0, 0, 0);
-  margin-right: 4px;
-  margin-top: 8px;
   display: inline-block;
-  font-weight: bold;
-  text-transform: lowercase;
-  font-size: 10px;
+  margin-top: 8px;
+  margin-right: 4px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--color-black);
+  background-image: linear-gradient(to right, rgba(253, 227, 167, 1) , rgba(250, 191, 88, 0.534));
+  border-radius: 18px;
+  font-weight: bold; 
+}
+
+/* ---------- FORM ---------- */
+
+input {
+  width: 100%;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  background: transparent;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"]{
+  padding: 8px 32px;
+  background-color: rgba(250, 191, 88, 0.678);
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  color: var(--color-black);
+  font-size: 16px;
 }

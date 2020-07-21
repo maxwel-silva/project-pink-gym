@@ -14,7 +14,7 @@ routes.get('/instructors/create', function (request, response) {
 })
 
 routes.post('/instructors', function(request, response){
-  return response.send('Cadastrado')
+  return response.send('cadastrado')
 })
 
 routes.get('/members', function (request, response) {
