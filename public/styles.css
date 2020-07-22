@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 :root {
-  --color-golden: #F1AF09;
-  --color-black: #000000a8;
+  --color-pink: #FF1493;
+  --color-white: #f5f5f5;
+  --color-black: rgba(0, 0, 0, 0.925);
 }
 
 * {
@@ -19,47 +21,47 @@ body {
 }
 
 header {
-  background-color: var(--color-black);
+  background-color: var(--color-white);
   width: 100%;
-  padding: 32px;
-  text-align: center;
+  padding: 22px;
   box-sizing: border-box;
-  border-bottom: 2px solid var(--color-golden);
+  border-bottom: 4px solid var(--color-pink);
+  display: flex;
+  align-items: center;
 }
 
 .links {
   font-size: 22px;
+  margin: 0px 400px;
+
 }
 
-.links a + a {
+/*.links a + a {
   margin-left: 32px;
 }
+*/
 
 .links a {
   text-decoration: none;
-  color: white;
+  color: black;
   position: relative;
+  margin: 0px 20px;
 }
 
 .links a:hover {
-  color: var(--color-golden);
+  color: var(--color-pink);
 }
 
 .links a.active {
-  font-weight: bold;
-
-  /*
-
-  color: var(--color-golden);
-
-  */
+font-weight: bold;
+color: var(--color-pink); 
 }
 
 .links a::after {
   content: "";
   width: 0;
   height: 1px;
-  background-color: var(--color-golden);
+  background-color: var(--color-pink);
   position: absolute;
   left: 0;
   bottom: -9px;
@@ -73,7 +75,7 @@ header {
 /* ---------- CARD ---------- */
 
 .card {
-  background-color: var(--color-black);
+  background-color: #0000008e;
   width: 800px;
   min-height: 400px;
 
@@ -85,7 +87,7 @@ header {
   grid-template-columns: 1fr 1fr;
 
   /* Sombra */
-  box-shadow: 20px 20px 40px -2px var(--color-black);
+  box-shadow: 20px 20px 40px -2px black;
 
   /* Animação do Card */
   animation-name: up;
@@ -98,7 +100,7 @@ header {
     opacity: 0;
     transform: translateY(15px);
   }
-
+  
   to {
     opacity: 1;
   }
@@ -112,7 +114,7 @@ header {
 }
 
 .details .item {
-  border-bottom: 1px solid rgba(245, 171, 53, 0.315);
+  border-bottom: 1px solid #ff69b45d;
   padding: 8px 0;
 }
 
@@ -127,7 +129,7 @@ header {
   line-height: 24px;
   letter-spacing: 1px;
   font-weight: normal;
-  color: rgba(255, 255, 255, 0.397);
+  color:#A9A9A9;
 }
 
 /* Pegando Segunda <div> </div> de Details */
@@ -139,9 +141,9 @@ header {
 
 .details h3 {
   /*text-transform: uppercase;*/
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 18px;
-  color: var(--color-golden);
+  color: var(--color-pink);
 }
 
 .details .item span {
@@ -151,41 +153,105 @@ header {
   padding: 8px 16px;
   font-size: 12px;
   color: var(--color-black);
-  background-image: linear-gradient(to right, rgba(253, 227, 167, 1) , rgba(240, 192, 111, 0.534));
   border-radius: 18px;
   font-weight: bold;
-  align-items: center;
-
+  color: var(--color-white);
 }
 
 /* ---------- FORM ---------- */
 
-input {
+input  {
   width: 100%;
   outline: none;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   background: transparent;
   flex: left;
   cursor: pointer;
 }
 
-input[type="radio"] {
+/*input[type="radio"] {
+  
+/*/
+
+
+input[name="gender"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
   width: initial;
   margin-right: 8px; 
 }
 
+input[name="class"]{
+  outline: none;
+  width: initial;
+  margin-right: 8px; 
+}
+ 
+input::after {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  content: attr(data-icon);
+  border-radius: 15px;
+  color: rgba(0,0,0,.4);
+  transition: box-shadow 0s, color 2s;
+  line-height: 2px;
+}
+
+input[value="F"]:checked::after{
+  color: #FFC0CB;
+  box-shadow: 2px 2px 15px #FFC0CB;
+}
+
+input[value="M"]:checked::after{
+  color: #87CEFA;
+  box-shadow: 2px 2px 15px #87CEFA;
+}
+
 input::placeholder {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 button[type="submit"]{
   padding: 8px 32px;
-  background-color: rgba(250, 191, 88, 0.678);
+  background-image: linear-gradient(to right, #BEBEBE , #E6E6FA);
   border-radius: 4px;
   margin-top: 32px;
   width: 100%;
   color: var(--color-black);
   font-size: 16px;
+  cursor: pointer;
+  transition: all 0.1s; 
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
