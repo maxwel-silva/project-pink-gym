@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 :root {
@@ -16,7 +16,7 @@
 body {
   background: #111111dc;
   font-family: Montserrat, sans-serif;
-  font-size: 14px ;
+  font-size: 16px ;
   color: white;
 }
 
@@ -33,7 +33,6 @@ header {
 .links {
   font-size: 22px;
   margin: 0px 400px;
-
 }
 
 /*.links a + a {
@@ -52,10 +51,12 @@ header {
   color: var(--color-pink);
 }
 
+/*
 .links a.active {
 font-weight: bold;
 color: var(--color-pink); 
 }
+*/
 
 .links a::after {
   content: "";
@@ -100,7 +101,7 @@ color: var(--color-pink);
     opacity: 0;
     transform: translateY(15px);
   }
-  
+
   to {
     opacity: 1;
   }
@@ -125,7 +126,7 @@ color: var(--color-pink);
 /* Pegando Primeira <div> </div> de Details e <h3> </h3> */
 .details h3,
 .details .item div:nth-child(1){
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
   font-weight: normal;
@@ -135,13 +136,14 @@ color: var(--color-pink);
 /* Pegando Segunda <div> </div> de Details */
 .details .item div:nth-child(2){
   color: white;
-  font-size: 18;
-  margin-top: 10px;
+  font-size: 15px;
+  margin-top: 12px;
+  font-weight: normal;
 }
 
 .details h3 {
   /*text-transform: uppercase;*/
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 18px;
   color: var(--color-pink);
 }
@@ -151,7 +153,7 @@ color: var(--color-pink);
   margin-top: 8px;
   margin-right: 4px;
   padding: 8px 16px;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--color-black);
   border-radius: 18px;
   font-weight: bold;
@@ -174,7 +176,6 @@ input  {
   
 /*/
 
-
 input[name="gender"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -196,9 +197,8 @@ input::after {
   font-family: 'FontAwesome';
   display: inline-block;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   content: attr(data-icon);
-  border-radius: 15px;
   color: rgba(0,0,0,.4);
   transition: box-shadow 0s, color 2s;
   line-height: 2px;
@@ -206,12 +206,12 @@ input::after {
 
 input[value="F"]:checked::after{
   color: #FFC0CB;
-  box-shadow: 2px 2px 15px #FFC0CB;
+  /*box-shadow: 2px 2px 15px #FFC0CB;*/
 }
 
 input[value="M"]:checked::after{
   color: #87CEFA;
-  box-shadow: 2px 2px 15px #87CEFA;
+  /*box-shadow: 2px 2px 15px #87CEFA;*/
 }
 
 input::placeholder {
