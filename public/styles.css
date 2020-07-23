@@ -21,13 +21,14 @@ body {
 }
 
 header {
-  background-color: var(--color-white);
   width: 100%;
-  padding: 22px 10px;
+  background-color: var(--color-white);
+  padding: 20px;
   box-sizing: border-box;
-  border-bottom: 4px solid var(--color-pink);
   display: flex;
+  flex-direction: row;
   align-items: center;
+  border-bottom: 4px solid var(--color-pink);
 }
 
 header .logo-image {
@@ -200,8 +201,8 @@ input[name="class"] {
 input {
   width: 100%;
   outline: none;
-  color: white;
-  font-size: 16px;
+  color: #eccfe0;
+  font-size: 18px;
   background: transparent;
   flex: left;
   cursor: pointer;
@@ -215,7 +216,7 @@ input[name="gender"] {
   appearance: none;
   outline: none;
   width: initial;
-  margin-right: 8px; 
+  margin-right: 14px; 
 }
 
 input::after {
@@ -242,7 +243,7 @@ input::placeholder {
   font-weight: bold;
 }
 
-button[type="submit"]{
+button[type="submit"] {
   padding: 8px 32px;
   background-image: linear-gradient(390deg, #eec0c6 10%, #FF69B4 99%);
   box-shadow: 0px 0px 12px #FF69B4;
