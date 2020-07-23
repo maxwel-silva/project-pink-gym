@@ -4,7 +4,7 @@
 :root {
   --color-pink: #FF1493;
   --color-white: #f5f5f5;
-  --color-black: rgba(0, 0, 0, 0.925);
+  --color-black: #000000;
 }
 
 * {
@@ -23,16 +23,26 @@ body {
 header {
   background-color: var(--color-white);
   width: 100%;
-  padding: 22px;
+  padding: 22px 10px;
   box-sizing: border-box;
   border-bottom: 4px solid var(--color-pink);
   display: flex;
   align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  header .links a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 .links {
-  font-size: 22px;
-  margin: 0px 400px;
+  font-size: 25px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 565px;
 }
 
 /*.links a + a {
@@ -44,7 +54,7 @@ header {
   text-decoration: none;
   color: black;
   position: relative;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .links a:hover {
@@ -92,7 +102,7 @@ color: var(--color-pink);
 
   /* Animação do Card */
   animation-name: up;
-  animation-duration: 200ms;
+  animation-duration: 100ms;
   animation-timing-function: ease;
 }
 
@@ -125,7 +135,7 @@ color: var(--color-pink);
 
 /* Pegando Primeira <div> </div> de Details e <h3> </h3> */
 .details h3,
-.details .item div:nth-child(1){
+.details .item div:nth-child(1) {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
@@ -134,7 +144,7 @@ color: var(--color-pink);
 }
 
 /* Pegando Segunda <div> </div> de Details */
-.details .item div:nth-child(2){
+.details .item div:nth-child(2) {
   color: white;
   font-size: 15px;
   margin-top: 12px;
@@ -149,20 +159,38 @@ color: var(--color-pink);
 }
 
 .details .item span {
+  padding: 8px 16px;
   display: inline-flex;
   margin-top: 8px;
   margin-right: 4px;
-  padding: 8px 16px;
   font-size: 16px;
-  color: var(--color-black);
   border-radius: 18px;
-  font-weight: bold;
-  color: var(--color-white);
+  color: var(--color-white); 
+}
+
+input[name="class"] {
+  outline: none;
+  width: initial;
+  margin-right: 14px; 
+  box-shadow: 0px 0px 12px var(--color-pink);
+}
+
+.details .item label {
+  padding: 8px 14px;
+  box-shadow: 0px 0px 12px var(--color-pink);
+  background-image: linear-gradient(390deg, #eec0c6 10%, #FF69B4 99%);
+  border-radius: 16px;
+  color: var(--color-black); 
+  letter-spacing: 1px;
+  margin-right: 16px;
+  margin-top: 8px;
+  display: inline-flex;
+  font-size: 14px; 
 }
 
 /* ---------- FORM ---------- */
 
-input  {
+input {
   width: 100%;
   outline: none;
   color: white;
@@ -171,10 +199,6 @@ input  {
   flex: left;
   cursor: pointer;
 }
-
-/*input[type="radio"] {
-  
-/*/
 
 input[name="gender"] {
   -webkit-appearance: none;
@@ -187,12 +211,6 @@ input[name="gender"] {
   margin-right: 8px; 
 }
 
-input[name="class"]{
-  outline: none;
-  width: initial;
-  margin-right: 8px; 
-}
- 
 input::after {
   font-family: 'FontAwesome';
   display: inline-block;
@@ -205,13 +223,11 @@ input::after {
 }
 
 input[value="F"]:checked::after{
-  color: #FFC0CB;
-  /*box-shadow: 2px 2px 15px #FFC0CB;*/
+  color: #FF69B4;
 }
 
 input[value="M"]:checked::after{
-  color: #87CEFA;
-  /*box-shadow: 2px 2px 15px #87CEFA;*/
+  color: #4169E1;
 }
 
 input::placeholder {
@@ -221,7 +237,8 @@ input::placeholder {
 
 button[type="submit"]{
   padding: 8px 32px;
-  background-image: linear-gradient(to right, #BEBEBE , #E6E6FA);
+  background-image: linear-gradient(390deg, #eec0c6 10%, #FF69B4 99%);
+  box-shadow: 0px 0px 12px #FF69B4;
   border-radius: 4px;
   margin-top: 32px;
   width: 100%;
@@ -254,4 +271,22 @@ button:hover span {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+footer {
+  background-color: var(--color-white);
+  padding: 1px;
+  height: 42px;
+  text-align: center;
+  width: 100%;
+}
+
+footer h3 {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--color-black);
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 24px;
 }
