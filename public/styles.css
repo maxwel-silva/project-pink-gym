@@ -2,7 +2,7 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 :root {
-  --color-pink: #FF1493;
+  --color-pink: #FF69B4;
   --color-white: #f5f5f5;
   --color-black: #000000;
 }
@@ -30,11 +30,14 @@ header {
   align-items: center;
 }
 
+header .logo-image {
+  padding-left: 20px;
+}
+
 @media screen and (max-width: 500px) {
   header .links a {
     float: none;
-    display: block;
-    text-align: left;
+    display: block;  
   }
 }
 
@@ -55,6 +58,7 @@ header {
   color: black;
   position: relative;
   margin: 0px 10px;
+  font-weight: normal;
 }
 
 .links a:hover {
@@ -87,7 +91,7 @@ color: var(--color-pink);
 
 .card {
   background-color: #0000008e;
-  width: 800px;
+  width: 900px;
   min-height: 400px;
 
   /* Espaçamento no Centro */
@@ -141,14 +145,16 @@ color: var(--color-pink);
   letter-spacing: 1px;
   font-weight: normal;
   color:#A9A9A9;
+
 }
 
 /* Pegando Segunda <div> </div> de Details */
 .details .item div:nth-child(2) {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 12px;
   font-weight: normal;
+  
 }
 
 .details h3 {
@@ -166,6 +172,7 @@ color: var(--color-pink);
   font-size: 16px;
   border-radius: 18px;
   color: var(--color-white); 
+  font-weight: normal;
 }
 
 input[name="class"] {
@@ -178,7 +185,7 @@ input[name="class"] {
 .details .item label {
   padding: 8px 14px;
   box-shadow: 0px 0px 12px var(--color-pink);
-  background-image: linear-gradient(390deg, #eec0c6 10%, #FF69B4 99%);
+  background-image: linear-gradient(390deg, #eec0c6 10%, var(--color-pink) 99%);
   border-radius: 16px;
   color: var(--color-black); 
   letter-spacing: 1px;
@@ -218,12 +225,12 @@ input::after {
   font-size: 35px;
   content: attr(data-icon);
   color: rgba(0,0,0,.4);
-  transition: box-shadow 0s, color 2s;
+  transition: box-shadow 0s, color 1s;
   line-height: 2px;
 }
 
 input[value="F"]:checked::after{
-  color: #FF69B4;
+  color: var(--color-pink);
 }
 
 input[value="M"]:checked::after{
@@ -256,7 +263,7 @@ button span {
 }
 
 button span:after {
-  content: '\00bb';
+  content: '\00b';
   position: absolute;
   opacity: 0;
   top: 0;
@@ -272,6 +279,8 @@ button:hover span:after {
   opacity: 1;
   right: 0;
 }
+
+/*---------- Rodapé ----------*/
 
 footer {
   background-color: var(--color-white);
