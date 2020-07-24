@@ -287,11 +287,12 @@ button:hover span:after {
 
 footer {
   background-color: var(--color-white);
-  padding: 1px;
-  height: 42px;
+  padding: 1.1px;
+  height: 46px;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  flex-direction: row;
 }
 
 footer h3 {
