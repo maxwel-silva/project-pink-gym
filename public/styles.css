@@ -17,7 +17,8 @@ body {
   background: #111111dc;
   font-family: Montserrat, sans-serif;
   font-size: 16px ;
-  color: white;
+  color: var(--color-white);
+  font-weight: normal;
 }
 
 header {
@@ -29,6 +30,7 @@ header {
   flex-direction: row;
   align-items: center;
   border-bottom: 4px solid var(--color-pink);
+ 
 }
 
 header .logo-image {
@@ -46,7 +48,7 @@ header .logo-image {
   font-size: 25px;
   margin-left:auto;
   margin-right:auto;
-  width: 565px;
+  width: 605px;
 }
 
 /*.links a + a {
@@ -125,7 +127,7 @@ color: var(--color-pink);
 /* ---------- Details ---------- */
 
 .details {
-  color: white;
+  color: var(--color-white);
   padding: 32px;
 }
 
@@ -151,11 +153,10 @@ color: var(--color-pink);
 
 /* Pegando Segunda <div> </div> de Details */
 .details .item div:nth-child(2) {
-  color: white;
-  font-size: 14px;
+  color: var(--color-white);
+  font-size: 18px;
   margin-top: 12px;
   font-weight: normal;
-  
 }
 
 .details h3 {
@@ -170,7 +171,7 @@ color: var(--color-pink);
   display: inline-flex;
   margin-top: 8px;
   margin-right: 4px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 18px;
   color: var(--color-white); 
   font-weight: normal;
@@ -201,11 +202,12 @@ input[name="class"] {
 input {
   width: 100%;
   outline: none;
-  color: #eccfe0;
+  color: var(--color-white);
   font-size: 18px;
   background: transparent;
   flex: left;
   cursor: pointer;
+  font-weight: normal;
 }
 
 input[name="gender"] {
@@ -289,6 +291,7 @@ footer {
   height: 42px;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 footer h3 {
