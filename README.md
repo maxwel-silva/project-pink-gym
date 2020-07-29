@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Desafio 4-2: Card do Professor
+  Desafio 4-2 Card do Professor
 </h3>
 
 <blockquote align="center">“Sua única limitação é você mesmo!”</blockquote>

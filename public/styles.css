@@ -181,7 +181,7 @@ input[name="class"] {
   outline: none;
   width: initial;
   margin-right: 14px; 
-  box-shadow: 0px 0px 12px var(--color-pink);
+  box-shadow: 0px 0px 20px 0px var(--color-pink);
 }
 
 .details .item label {
@@ -283,7 +283,7 @@ button:hover span:after {
   right: 0;
 }
 
-/*---------- Rodapé ----------*/
+/*---------- RODAPÉ ----------*/
 
 footer {
   background-color: var(--color-white);
