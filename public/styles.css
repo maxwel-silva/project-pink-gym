@@ -29,8 +29,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 4px solid var(--color-pink);
- 
+  border-bottom: 4px solid var(--color-pink); 
 }
 
 header .logo-image {
@@ -51,10 +50,9 @@ header .logo-image {
   width: 605px;
 }
 
-/*.links a + a {
+.links a + a {
   margin-left: 32px;
 }
-*/
 
 .links a {
   text-decoration: none;
@@ -148,7 +146,6 @@ color: var(--color-pink);
   letter-spacing: 1px;
   font-weight: normal;
   color:#A9A9A9;
-
 }
 
 /* Pegando Segunda <div> </div> de Details */
@@ -180,8 +177,9 @@ color: var(--color-pink);
 input[name="class"] {
   outline: none;
   width: initial;
-  margin-right: 14px; 
-  /*box-shadow: 0px 0px 16px 0px var(--color-pink);*/
+  margin-right: 10px; 
+  margin-top: 2px;
+  /*box-shadow: 0px 0px 12px var(--color-pink);*/
 }
 
 .details .item label {
@@ -242,7 +240,7 @@ input[value="M"]:checked::after{
 
 input::placeholder {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 button[type="submit"] {
@@ -266,12 +264,11 @@ button span {
 }
 
 button span:after {
-  content: '\00b';
   position: absolute;
   opacity: 0;
   top: 0;
   right: -20px;
-  transition: 0.5s;
+  transition: 0.20s;
 }
 
 button:hover span {
