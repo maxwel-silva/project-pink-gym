@@ -51,7 +51,7 @@ header .logo-image {
 }
 
 .links a + a {
-  margin-left: 22px;
+  margin-left: 20px;
 }
 
 .links a {
@@ -88,7 +88,7 @@ color: var(--color-pink);
   transition: width 100ms ease-in-out;
 }
 
-/* ---------- CARD ---------- */
+/* ---------- Card ---------- */
 
 .card {
   background-color: #0000008e;
@@ -195,7 +195,7 @@ input[name="class"] {
   font-size: 14px; 
 }
 
-/* ---------- FORM ---------- */
+/* ---------- Form ---------- */
 
 input {
   width: 100%;
@@ -221,6 +221,11 @@ input[name="birth"],
 input[name="name"],
 input[name="services"] {
   -webkit-text-fill-color: var(--color-white) !important;
+}
+
+input[name="birth"] {
+  color: rgb(187, 41, 41);
+  opacity: 1;
 }
 
 input[name="gender"] {
@@ -298,7 +303,7 @@ button:hover span:after {
   right: 0;
 }
 
-/*---------- RODAPÉ ----------*/
+/*---------- Rodapé ----------*/
 
 footer {
   background-color: var(--color-white);
@@ -316,5 +321,5 @@ footer h3 {
   color: var(--color-black);
   text-align: center;
   margin-bottom: 12px;
-  margin-top: 14px; 
+  margin-top: 15px; 
 }
