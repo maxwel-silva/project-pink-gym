@@ -11,11 +11,11 @@ exports.post = function (request, response) {
     }
   }
 
-  // Adicionando Data Cadastro
+  // Adicionando Data Cadastro Instructor
   request.body.birth = Date.parse(request.body.birth)
   request.body.created_at = Date.now()
 
-  // Adicionar ID Instructor
+  // Adicionando ID Instructor
   request.body.id = Number(data.instructors.length + 1)
 
   // Armazenando Informações Instructors
