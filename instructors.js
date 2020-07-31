@@ -11,6 +11,11 @@ exports.post = function (request, response) {
     }
   }
 
+  // Adicionando Data de Cadastro
+  
+  request.body.birth = Date.parse(request.body.birth)
+  request.body.created_at = Date.now()
+
   // []
   data.instructors.push(request.body) // [{...}, {...}, {...}]
 

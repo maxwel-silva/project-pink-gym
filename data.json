@@ -2,27 +2,12 @@
   "instructors": [
     {
       "avatar_url": "https://google.com.br",
-      "name": "Vanessa OIiveira",
-      "birth": "1991-07-22",
-      "gender": "F",
-      "class": "P",
-      "services": "Natação, Musculação"
-    },
-    {
-      "avatar_url": "https://google.com.br",
-      "name": "Adriana Souto",
-      "birth": "1990-07-23",
+      "name": "Gabriela Fernanda",
+      "birth": 772675200000,
       "gender": "F",
       "class": "D",
-      "services": "Natação, Basquete"
-    },
-    {
-      "avatar_url": "https://google.com.br",
-      "name": "Gabriela Fernanda",
-      "birth": "1994-01-30",
-      "gender": "F",
-      "class": "P",
-      "services": "Crossfit"
+      "services": "Crossfit",
+      "created_at": 1596163546854
     }
   ]
 }
