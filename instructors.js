@@ -12,14 +12,14 @@ exports.post = function (request, response) {
   }
 
   // Adicionando Data Cadastro
-
   request.body.birth = Date.parse(request.body.birth)
   request.body.created_at = Date.now()
 
-  // []
-  data.instructors.push(request.body) // [{...}, {...}, {...}]
+  // Adicionar ID Instructor
+  request.body.id = Number(data.instructors.length + 1)
 
   // Armazenando Informações Instructors
+  data.instructors.push(request.body) 
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return response.send('Write file error')
