@@ -1,0 +1,20 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "https://google.com.br",
+      "name": "Vanessa OIiveira",
+      "birth": "1991-07-22",
+      "gender": "F",
+      "class": "P",
+      "services": "Natação, Musculação"
+    },
+    {
+      "avatar_url": "https://google.com.br",
+      "name": "Adriana Souto",
+      "birth": "1990-07-23",
+      "gender": "F",
+      "class": "D",
+      "services": "Natação, Basquete"
+    }
+  ]
+}
