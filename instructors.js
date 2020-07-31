@@ -15,7 +15,7 @@ exports.post = function (request, response) {
   data.instructors.push(request.body) // [{...}, {...}, {...}]
 
   // Armazenando Informações Instructors
-  
+
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return response.send('Write file error')
     return response.redirect('/instructors')

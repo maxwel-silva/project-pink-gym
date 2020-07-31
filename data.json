@@ -15,6 +15,14 @@
       "gender": "F",
       "class": "D",
       "services": "Natação, Basquete"
+    },
+    {
+      "avatar_url": "https://google.com.br",
+      "name": "Gabriela Fernanda",
+      "birth": "1994-01-30",
+      "gender": "F",
+      "class": "P",
+      "services": "Crossfit"
     }
   ]
 }
