@@ -11,16 +11,18 @@ exports.post = function (request, response) {
     }
   }
 
-  // Adicionando Data Cadastro Instructor
+  // Adicionando Data Cadastro
+
   request.body.birth = Date.parse(request.body.birth)
   request.body.created_at = Date.now()
 
-  // Adicionando ID Instructor
+  // Adicionando ID
+
   request.body.id = Number(data.instructors.length + 1)
 
-  // Armazenando Informações Instructors
-  data.instructors.push(request.body) 
+  // Armazenando Informações JSON
 
+  data.instructors.push(request.body) 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return response.send('Write file error')
     return response.redirect('/instructors')
