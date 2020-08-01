@@ -224,7 +224,7 @@ input[name="services"] {
 }
 
 input[name="birth"] {
-  color: rgb(187, 41, 41);
+  color: var(--color-pink);
   opacity: 1;
 }
 
