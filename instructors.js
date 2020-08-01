@@ -3,6 +3,8 @@ const data = require('./data.json')
 
 exports.post = function (request, response) {
 
+  // Validação Dados
+
   const keys = Object.keys(request.body)
 
   for (key of keys) {
@@ -11,18 +13,29 @@ exports.post = function (request, response) {
     }
   }
 
-  // Adicionando Data Cadastro
+  // Tratamento Dados
 
-  request.body.birth = Date.parse(request.body.birth)
-  request.body.created_at = Date.now()
+  let { avatar_url, name, birth, gender, classes, services } = request.body
 
-  // Adicionando ID
+  birth = Date.parse(birth)
+  const created_at = Date.now()
+  const id = Number(data.instructors.length + 1)
 
-  request.body.id = Number(data.instructors.length + 1)
+  // Organização Dados
 
-  // Armazenando Informações JSON
+  data.instructors.push({
+    id,
+    avatar_url,
+    name,
+    birth,
+    gender,
+    classes,
+    services,
+    created_at,
+  })
 
-  data.instructors.push(request.body) 
+  // Armazenando os Dados
+
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return response.send('Write file error')
     return response.redirect('/instructors')
