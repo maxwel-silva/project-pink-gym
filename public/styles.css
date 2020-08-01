@@ -138,7 +138,7 @@ color: var(--color-pink);
   border: none;
 }
 
-/* Pegando Primeira <div> </div> de Details e <h3> </h3> */
+/* Pegando Primeira <div> </div> de Details and <h3> </h3> */
 .details h3,
 .details .item div:nth-child(1) { 
   line-height: 24px;
@@ -157,7 +157,11 @@ color: var(--color-pink);
 }
 
 .details h3 {
-  /*text-transform: uppercase;*/
+
+  /* text-transform: uppercase; 
+     letter-spacing: 1px;
+  */
+
   font-weight: bold;
   font-size: 18px;
   color: var(--color-pink);
