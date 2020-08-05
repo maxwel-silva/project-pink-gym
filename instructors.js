@@ -15,7 +15,7 @@ exports.post = function (request, response) {
 
   // Tratamento Dados
 
-  let { avatar_url, name, birth, gender, classes, services } = request.body
+  let { avatar_url, name, birth, gender, education, classes, services } = request.body
 
   birth = Date.parse(birth)
   const created_at = Date.now()
@@ -29,6 +29,7 @@ exports.post = function (request, response) {
     name,
     birth,
     gender,
+    education,
     classes,
     services,
     created_at,

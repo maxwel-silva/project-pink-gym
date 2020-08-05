@@ -201,6 +201,7 @@ input[name="classes"] {
 
 /* ---------- Form ---------- */
 
+select[name="education"],
 input {
   width: 100%;
   outline: none;
@@ -212,6 +213,10 @@ input {
   font-weight: normal;
   font-family: Montserrat, sans-serif;
 }
+select[name="education"]{
+  color: var(--color-black);
+  margin-top: 12px;
+}
 
 input:-webkit-autofill {
   box-shadow: 0 0 0 30px #000000e8 inset;
@@ -220,7 +225,7 @@ input:-webkit-autofill {
 input[name="avatar_url"] {
   -webkit-text-fill-color: #4169E1 !important;
 }
-
+select[name="education"],
 input[name="birth"],
 input[name="name"],
 input[name="services"] {
@@ -228,10 +233,11 @@ input[name="services"] {
 }
 
 input[name="birth"] {
-  color: var(--color-pink);
+  color: none;
   opacity: 1;
 }
 
+select[name="education"],
 input[name="gender"] {
   -webkit-appearance: none;
   -moz-appearance: none;

@@ -4,39 +4,12 @@
       "id": 1,
       "avatar_url": "https://google.com.br",
       "name": "Gabriela Fernanda",
-      "birth": 772675200000,
+      "birth": 1597795200000,
       "gender": "F",
-      "class": "D",
-      "services": "Crossfit",
-      "created_at": 1596163546854
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://google.com.br",
-      "name": "Gabriela Fernanda",
-      "birth": 1598486400000,
-      "gender": "F",
-      "services": "Natação, Musculação",
-      "created_at": 1596251856313
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://google.com.br",
-      "name": "Adriana Souto",
-      "birth": 1597622400000,
-      "gender": "F",
-      "services": "Natação",
-      "created_at": 1596251897219
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://google.com",
-      "name": "Roberta",
-      "birth": 1597017600000,
-      "gender": "F",
+      "education": "P",
       "classes": "D",
-      "services": "Crossfit",
-      "created_at": 1596252621087
+      "services": "Natação, Musculação",
+      "created_at": 1596657088554
     }
   ]
 }
