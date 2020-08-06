@@ -4,23 +4,12 @@
       "id": 1,
       "avatar_url": "https://google.com.br",
       "name": "Gabriela Fernanda",
-      "birth": 1597795200000,
+      "birth": 1597622400000,
       "gender": "F",
-      "education": "P",
+      "education": "Pós-graduação",
       "classes": "D",
       "services": "Natação, Musculação",
-      "created_at": 1596657088554
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://google.com.br",
-      "name": "Vanessa OIiveira",
-      "birth": 1596412800000,
-      "gender": "F",
-      "education": "P",
-      "classes": "D",
-      "services": "Zumba",
-      "created_at": 1596658206997
+      "created_at": 1596755733691
     }
   ]
 }

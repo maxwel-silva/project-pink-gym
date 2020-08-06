@@ -10,11 +10,23 @@ exports.show = function (request, response) {
     return instructor.id == id
   })
 
-  if(!foundInstructor){
+  if (!foundInstructor) {
     return response.send('Instructor not found')
   }
 
-  return response.send(foundInstructor)
+  const instructor = {
+
+    // Realizando Spread
+
+    ...foundInstructor,
+
+    age: "",
+    classes: "",
+    services: foundInstructor.services.split(','),
+    created_at: ""
+  }
+
+  return response.render('instructors/show.njk', { instructor })
 }
 
 // Create Instructors
