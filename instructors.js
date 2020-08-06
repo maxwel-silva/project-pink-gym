@@ -1,6 +1,23 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+
+// Show Instructor
+exports.show = function (request, response) {
+  const { id } = request.params
+
+  const foundInstructor = data.instructors.find(function (instructor) {
+    return instructor.id == id
+  })
+
+  if(!foundInstructor){
+    return response.send('Instructor not found')
+  }
+
+  return response.send(foundInstructor)
+}
+
+// Create Instructors
 exports.post = function (request, response) {
 
   // Validação Dados
