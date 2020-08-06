@@ -15,9 +15,7 @@ routes.get('/instructors/create', function (request, response) {
   return response.render('instructors/create')
 })
 
-
 routes.post('/instructors', instructors.post)
-
 
 routes.get('/members', function (request, response) {
   return response.render('members/index')
