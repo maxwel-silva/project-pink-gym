@@ -14,14 +14,27 @@ exports.show = function (request, response) {
     return response.send('Instructor not found')
   }
 
+  // Lógica Age Instructor
+
+  function age(timestamp) {
+    const today = new Date()
+    const birthDate = new Date(timestamp)
+
+    let age = today.getFullYear() - birthDate.getFullYear()
+    const month = today.getMonth() - birthDate.getMonth()
+
+    if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
+      age = age - 1
+    }
+    return age
+  }
+
   const instructor = {
 
     // Realizando Spread
 
     ...foundInstructor,
-
-    age: "",
-    classes: "",
+    age: age(foundInstructor.birth),
     services: foundInstructor.services.split(','),
     created_at: ""
   }
@@ -71,3 +84,6 @@ exports.post = function (request, response) {
     return response.redirect('/instructors')
   })
 }
+
+
+

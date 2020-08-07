@@ -10,6 +10,17 @@
       "classes": "D",
       "services": "Natação, Musculação",
       "created_at": 1596755733691
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://cdn.emtempo.com.br/img/inline/170000/LUTADORA-JPEG_00174956_0_201910091814.jpg",
+      "name": "Roberta Lima",
+      "birth": 733708800000,
+      "gender": "F",
+      "education": "Ensino Superior Completo",
+      "classes": "P",
+      "services": "Boxe, Muay-Thay",
+      "created_at": 1596756109716
     }
   ]
 }
