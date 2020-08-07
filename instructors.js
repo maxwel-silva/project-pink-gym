@@ -1,8 +1,9 @@
 const fs = require('fs')
 const data = require('./data.json')
-
+const { age } = require('./utils')
 
 // Show Instructor
+
 exports.show = function (request, response) {
   const { id } = request.params
 
@@ -14,21 +15,6 @@ exports.show = function (request, response) {
     return response.send('Instructor not found')
   }
 
-  // Lógica Age Instructor
-
-  function age(timestamp) {
-    const today = new Date()
-    const birthDate = new Date(timestamp)
-
-    let age = today.getFullYear() - birthDate.getFullYear()
-    const month = today.getMonth() - birthDate.getMonth()
-
-    if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
-      age = age - 1
-    }
-    return age
-  }
-
   const instructor = {
 
     // Realizando Spread
@@ -38,11 +24,11 @@ exports.show = function (request, response) {
     services: foundInstructor.services.split(','),
     created_at: ""
   }
-
   return response.render('instructors/show.njk', { instructor })
 }
 
 // Create Instructors
+
 exports.post = function (request, response) {
 
   // Validação Dados
