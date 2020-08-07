@@ -2,36 +2,14 @@
   "instructors": [
     {
       "id": 1,
-      "avatar_url": "https://google.com.br",
-      "name": "Gabriela Fernanda",
-      "birth": 1597622400000,
-      "gender": "F",
-      "education": "Pós-graduação",
-      "classes": "D",
-      "services": "Natação, Musculação",
-      "created_at": 1596755733691
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://cdn.emtempo.com.br/img/inline/170000/LUTADORA-JPEG_00174956_0_201910091814.jpg",
-      "name": "Roberta Lima",
-      "birth": 733708800000,
+      "avatar_url": "https://agfight.com/wp-content/uploads/2019/05/amanda-ribas.jpg",
+      "name": "Amanda Ribas",
+      "birth": 775094400000,
       "gender": "F",
       "education": "Ensino Superior Completo",
       "classes": "P",
-      "services": "Boxe, Muay-Thay",
-      "created_at": 1596756109716
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://scontent.fcgh38-1.fna.fbcdn.net/v/t1.0-9/p960x960/37838876_1742713712513565_492117846696919040_o.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_eui2=AeHzAR69d5bCbVmkblSGtVg1-FgiJMlv8lX4WCIkyW_yVZyJrzxFjqYT-afr0sQa2xidnhoESw-idf73VGpFp-RQ&_nc_ohc=ADGYb8NNPLEAX-bPIGM&_nc_ht=scontent.fcgh38-1.fna&_nc_tp=6&oh=dbfc6d7cd10f5eefc8bc08118d729e8a&oe=5F53472A",
-      "name": "Gabriel Vasconcelos",
-      "birth": 836956800000,
-      "gender": "M",
-      "education": "Ensino Médio Completo",
-      "classes": "P",
-      "services": "Musculação, Comedor de Trabequin",
-      "created_at": 1596760999761
+      "services": "Musculação, Boxe, MMA",
+      "created_at": 1596768515703
     }
   ]
 }
