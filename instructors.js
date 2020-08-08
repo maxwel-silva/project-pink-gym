@@ -2,7 +2,7 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age } = require('./utils')
 
-// Show Instructor
+// Visualizações Instructor
 
 exports.show = function (request, response) {
   const { id } = request.params
@@ -14,7 +14,7 @@ exports.show = function (request, response) {
   if (!foundInstructor) {
     return response.send('Instructor not found')
   }
-
+ 
   const instructor = {
 
     // Realizando Spread
@@ -22,16 +22,17 @@ exports.show = function (request, response) {
     ...foundInstructor,
     age: age(foundInstructor.birth),
     services: foundInstructor.services.split(','),
-    created_at: ""
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
+
   }
   return response.render('instructors/show.njk', { instructor })
 }
 
-// Create Instructors
+// Criações Instructors
 
 exports.post = function (request, response) {
 
-  // Validação Dados
+  // Validando Dados
 
   const keys = Object.keys(request.body)
 
@@ -41,7 +42,7 @@ exports.post = function (request, response) {
     }
   }
 
-  // Tratamento Dados
+  // Tratando Dados
 
   let { avatar_url, name, birth, gender, education, classes, services } = request.body
 
@@ -49,7 +50,7 @@ exports.post = function (request, response) {
   const created_at = Date.now()
   const id = Number(data.instructors.length + 1)
 
-  // Organização Dados
+  // Organizando Dados
 
   data.instructors.push({
     id,

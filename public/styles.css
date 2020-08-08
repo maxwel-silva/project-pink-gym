@@ -223,7 +223,7 @@ input:-webkit-autofill {
 }
 
 input[name="avatar_url"] {
-  -webkit-text-fill-color: #4169E1 !important;
+  -webkit-text-fill-color: #1E90FF !important;
 }
 select[name="education"],
 input[name="birth"],
