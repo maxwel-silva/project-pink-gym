@@ -14,7 +14,7 @@ exports.show = function (request, response) {
   if (!foundInstructor) {
     return response.send('Instructor not found')
   }
- 
+
   const instructor = {
 
     // Realizando Spread
@@ -23,7 +23,6 @@ exports.show = function (request, response) {
     age: age(foundInstructor.birth),
     services: foundInstructor.services.split(','),
     created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
-
   }
   return response.render('instructors/show.njk', { instructor })
 }

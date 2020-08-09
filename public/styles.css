@@ -274,6 +274,7 @@ input::placeholder {
   font-family: Montserrat, sans-serif;
 }
 
+a.button,
 button[type="submit"] {
   padding: 8px 32px;
   background-image: linear-gradient(390deg, #eec0c6 10%, #FF69B4 99%);
@@ -286,6 +287,13 @@ button[type="submit"] {
   cursor: pointer;
   transition: all 0.1s; 
   font-family: Montserrat, sans-serif;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
 }
 
 button span {
