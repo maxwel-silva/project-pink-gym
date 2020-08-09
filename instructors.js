@@ -2,7 +2,7 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age } = require('./utils')
 
-// Visualizações Instructor
+// Visualizar Instructors
 
 exports.show = function (request, response) {
   const { id } = request.params
@@ -27,7 +27,7 @@ exports.show = function (request, response) {
   return response.render('instructors/show.njk', { instructor })
 }
 
-// Criações Instructors
+// Criar Instructors
 
 exports.post = function (request, response) {
 
@@ -72,4 +72,18 @@ exports.post = function (request, response) {
 }
 
 
+// Editar Instructors
 
+exports.edit = function (request, response) {
+
+  const { id } = request.params
+
+  const foundInstructor = data.instructors.find(function (instructor) {
+    return instructor.id == id
+  })
+
+  if (!foundInstructor) {
+    return response.send('Instructor not found')
+  }
+  return response.render('instructors/edit', { instructor: foundInstructor })
+}
