@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { age } = require('./utils')
+const { age, date } = require('./utils')
 
 // Visualizar Instructors
 
@@ -71,7 +71,6 @@ exports.post = function (request, response) {
   })
 }
 
-
 // Editar Instructors
 
 exports.edit = function (request, response) {
@@ -82,8 +81,14 @@ exports.edit = function (request, response) {
     return instructor.id == id
   })
 
+  const instructor = {
+    ...foundInstructor,
+    birth: date(foundInstructor.birth)
+  }
+
   if (!foundInstructor) {
     return response.send('Instructor not found')
   }
-  return response.render('instructors/edit', { instructor: foundInstructor })
+
+  return response.render('instructors/edit', { instructor })
 }
