@@ -80,14 +80,14 @@ exports.edit = function (request, response) {
   const foundInstructor = data.instructors.find(function (instructor) {
     return instructor.id == id
   })
+ 
+  if (!foundInstructor) {
+    return response.send('Instructor not found')
+  }
 
   const instructor = {
     ...foundInstructor,
     birth: date(foundInstructor.birth)
-  }
-
-  if (!foundInstructor) {
-    return response.send('Instructor not found')
   }
 
   return response.render('instructors/edit', { instructor })
