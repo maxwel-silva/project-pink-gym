@@ -71,7 +71,7 @@ exports.post = function (request, response) {
   })
 }
 
-// Editar Instructors
+// Page Editar Instructors 
 
 exports.edit = function (request, response) {
 
@@ -80,7 +80,7 @@ exports.edit = function (request, response) {
   const foundInstructor = data.instructors.find(function (instructor) {
     return instructor.id == id
   })
- 
+
   if (!foundInstructor) {
     return response.send('Instructor not found')
   }
@@ -91,4 +91,40 @@ exports.edit = function (request, response) {
   }
 
   return response.render('instructors/edit', { instructor })
+}
+
+// Put Instructors
+
+exports.put = function (request, response) {
+
+  const { id } = request.body
+  let index = 0
+
+  const foundInstructor = data.instructors.find(function (instructor, foundIndex) {
+    if (id == instructor.id) {
+      index = foundIndex
+      return true
+    }
+  })
+
+  if (!foundInstructor) {
+    return response.send('Instructor not found')
+  }
+
+  const instructor = {
+    ...foundInstructor,
+    ...request.body,
+    birth: Date.parse(request.body.birth)
+  }
+
+  data.instructors[index] = instructor
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+    if (err) {
+      return response.send('Write error')
+      
+    } else {
+      return response.redirect(`/instructors/${id}`)
+    }
+  })
 }

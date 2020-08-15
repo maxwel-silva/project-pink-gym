@@ -18,6 +18,13 @@ routes.get('/instructors/create', function (request, response) {
 routes.get('/instructors/:id', instructors.show)
 routes.get('/instructors/:id/edit', instructors.edit)
 routes.post('/instructors', instructors.post)
+routes.put('/instructors', instructors.put)
+
+// HTTP Verbs *
+// GET : Receber 
+// POST : Criar 
+// PUT : Atualizar 
+// DELETE : Deletar
 
 routes.get('/members', function (request, response) {
   return response.render('members/index')
