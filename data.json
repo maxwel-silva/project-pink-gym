@@ -10,28 +10,6 @@
       "classes": "P",
       "services": "Musculação, Boxe, MMA",
       "created_at": 1596768515703
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://images.pexels.com/photos/3395923/pexels-photo-3395923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "name": "Amanda Ribas",
-      "birth": 775094400000,
-      "gender": "F",
-      "education": "Ensino Médio Completo",
-      "classes": "D",
-      "services": "Musculação, Boxe, MMA",
-      "created_at": 1597024719694
-    },
-    {
-      "id": 3,
-      "avatar_url": "HTTPS://SASAS.COM",
-      "name": "Maria",
-      "birth": 1609372800000,
-      "gender": "F",
-      "education": "Ensino Médio Completo",
-      "classes": "P",
-      "services": "Natação",
-      "created_at": 1597025618303
     }
   ]
 }

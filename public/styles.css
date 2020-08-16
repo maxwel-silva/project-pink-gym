@@ -322,6 +322,14 @@ button:hover span:after {
   right: 0;
 }
 
+/*---------- Button Delete----------*/
+
+#form-delete button[type="submit"] {
+  background-image: linear-gradient(390deg, #eec0c6 10%,  #FE5858 99%);
+  box-shadow: 0px 0px 12px #e02020;
+  margin-top: 18px;
+}
+
 /*---------- Rodapé ----------*/
 
 footer {

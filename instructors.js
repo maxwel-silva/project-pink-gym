@@ -122,9 +122,33 @@ exports.put = function (request, response) {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) {
       return response.send('Write error')
-      
+
     } else {
       return response.redirect(`/instructors/${id}`)
     }
   })
 }
+
+// Delete Instructors
+
+exports.delete = function (request, response) {
+  const { id } = request.body
+  const filteredInstructors = data.instructors.filter(function (instructor) {
+    return instructor.id != id
+  })
+
+  data.instructors = filteredInstructors
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+    if (err) {
+      return response.send('Write file error')
+
+    } else {
+      return response.redirect('/instructors')
+    }
+  })
+
+}
+
+
+
