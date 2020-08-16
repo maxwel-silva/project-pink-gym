@@ -1,12 +1,12 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "https://images.pexels.com/photos/3395923/pexels-photo-3395923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "name": "Amanda Ribas",
-      "birth": 775094400000,
-      "gender": "M",
-      "education": "Ensino Superior Completo",
+      "name": "Amanda Ribeiro",
+      "birth": 813283200000,
+      "gender": "F",
+      "education": "Pós-graduação",
       "classes": "P",
       "services": "Musculação, Boxe, MMA",
       "created_at": 1596768515703
